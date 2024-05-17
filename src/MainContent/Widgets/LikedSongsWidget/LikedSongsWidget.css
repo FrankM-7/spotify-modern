@@ -1,0 +1,10 @@
+.liked-pic {
+    border-radius: 12px;
+    height: 42px;
+    width: 42px;
+    background-color: #8498fa;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

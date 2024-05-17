@@ -1,0 +1,7 @@
+.container {
+    width: 190px; /* Adjust width as needed */
+    height: 42px; /* Adjust height as needed */
+    border: 0; /* No border */
+    border-radius: 20px; /* Rounded edges */
+    background-color: rgba(61, 61, 61, 0.212); /* Semi-transparent grey */
+}

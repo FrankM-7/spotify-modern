@@ -1,0 +1,34 @@
+.nav-row {
+    height: 43px;
+    display: flex;
+    align-items: center;
+    text-align: center;  /* Center the text horizontally */
+    border-radius: 14px;
+    padding-left: 10px;
+}
+
+.nav-row:hover {
+    background-color: #33343d;
+}
+
+.selected {
+    background-color: #33343d;
+    position: relative; /* Ensure positioning context for pseudo-element */
+}
+
+.selected::before {
+    content: '';
+    position: absolute;
+    top: 50%; /* Position at the vertical center */
+    transform: translateY(-50%); /* Adjust to vertically center the line */
+    left: -8px; /* Adjust this value as needed */
+    width: 4px;
+    height: 18px; /* Adjust this value as needed */
+    background-color: #1ed760;
+    border-radius: 2px;
+}
+
+.icon {
+    filter: invert(100%) sepia(0%) saturate(7490%) hue-rotate(196deg) brightness(103%) contrast(101%);
+}
+

@@ -1,0 +1,217 @@
+.player {
+    height: 122px;
+    background-color: #222329;
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.player-col {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.album-art {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+}
+
+.album-art-container {
+    width: 106px;
+    height: 106px;
+    margin-left: 8px;
+}
+
+.song-info-container {
+    margin-left: 18px;
+}
+
+.circle-container-player {
+    gap: 10px;
+    display: flex;
+}
+.player-icon {
+    width: 18px;
+    height: 18px;
+    filter: invert(100%) sepia(0%) saturate(7490%) hue-rotate(196deg) brightness(103%) contrast(101%);
+}
+
+.song {
+    margin-bottom: 10px;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.artist {
+    /* line up to the left */
+    text-align: left;
+    font-size: 12px;
+    color: #8e8e8e;
+}
+
+.player-right-row-top {
+    height: 50px;
+    width: 261px;    
+    border-radius: 16px;
+    background-color: #33343d;
+    margin-right: 8px;
+
+}
+
+.player-right-row-bottom {
+    border: 1px #33343d solid;
+    height: 50px;
+    width: 261px;
+    border-radius: 16px;
+    margin-right: 8px;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.player-col#right-side {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.player-controls {
+    height: 122px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 690px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 15px;
+}
+
+.player-controls-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.player-controls-row:nth-child(1) {
+    gap: 10px;
+}
+
+.player-controls-row:nth-child(2) {
+    width: 100%;
+}
+
+.play-button {
+    width: 43px;
+    height: 43px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 13px;
+}
+
+.play-button-img {
+    width: 14px;
+    height: 14px;
+}
+
+.button-controls {
+    width: 43px;
+    height: 43px;
+    /* background-color: white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.button-controls img {
+    height: 14px;
+    width: 14px;
+    filter: invert(100%) sepia(0%) saturate(7490%) hue-rotate(196deg) brightness(103%) contrast(101%);
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #33343d;
+    height: 8px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.progress-bar {
+    height: 8px;
+    background-color: #1ed760; /* Green color */
+    width: 0%; /* Default width. You should dynamically change this with JavaScript */
+    border-radius: 4px;
+}
+
+.time {
+    color: #acacac;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.queue-album {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.player-right-row-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 4px;
+    box-sizing: border-box;
+}
+
+.queue-info {
+    margin-left: 8px;
+    width: 170px;
+}
+
+.queue-song {
+    font-size: 14px;
+    color: white;
+    text-align: left;
+}
+
+.queue-artist {
+    font-size: 12px;
+    color: #8e8e8e;
+    text-align: left;
+}
+
+.queue-icon {
+    width: 20px;
+    height: 20px;
+    filter: invert(100%) sepia(0%) saturate(7490%) hue-rotate(196deg) brightness(103%) contrast(101%);
+    margin-left: 4px;
+}
+
+.spotify-icons {
+    width: 15px;
+    height: 15px;
+    filter: invert(100%) sepia(0%) saturate(7490%) hue-rotate(196deg) brightness(103%) contrast(101%);
+}

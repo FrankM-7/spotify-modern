@@ -1,0 +1,82 @@
+.latest-release-widget {
+    height: 228px;
+    width: 228px;
+    background-color: rgba(0, 0, 0, 0.137);
+    border-radius: 27px;
+    /* blur */
+    backdrop-filter: blur(20px);
+    color: white;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lr-col#second {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;    
+    padding-bottom: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+    height: 100%;
+}
+.lr-play {
+    background-color: #1ed760;
+    height: 42px;
+    width: 42px;
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.lr-play img {
+    height: 15px;
+    width: 15px;
+}
+
+.lr-header {
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.latest-release-cover-container {
+    height: 115px;
+    width: 115px;
+
+    overflow: hidden; /* Ensures nothing extends beyond the container */
+    display: flex; /* Enables more flexible alignment options */
+    justify-content: center; /* Centers image horizontally */
+    align-items: center; /* Centers image vertically */
+    border-radius: 17px;
+}
+.lr-details {
+    height: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.latest-release-image {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    max-width: none; /* Overrides any max-width that might restrict the image's natural size */
+}
+
+.latest-release-play-button {
+    width: 42px;
+    height: 42px;
+    background-color: #1ed760;
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

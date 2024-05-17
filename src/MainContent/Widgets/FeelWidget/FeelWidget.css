@@ -1,0 +1,86 @@
+:root {
+    --energetic: #fefd97;
+    --happy: #6ccfc0;
+    --relaxed: #b6a2dd;
+    --sad: #c7ecfe;
+}
+
+.circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: none;
+    color: #000;
+    cursor: pointer;
+    border: 1px #33343d solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.circle-container {
+    display: flex;
+    flex-direction: row;  /* Keep items in a row */
+    justify-content: space-between;  /* Center items horizontally */
+    align-items: center;  /* Center items vertically */
+}
+
+.textBox {
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    height: 100%; /* Ensure the text box takes up the entire height of its container */
+}
+
+.circle:hover .icon {
+    filter: invert(0%);
+}
+
+.circle#energetic:hover {
+    background-color: var(--energetic);
+    color: #000;
+}
+
+.circle#happy:hover {
+    background-color: var(--happy);
+    color: #000;
+}
+
+.circle#relaxed:hover {
+    background-color: var(--relaxed);
+    color: #000;
+}
+
+.circle#sad:hover {
+    background-color: var(--sad);
+    color: #000;
+}
+
+.circle.selected-emote#energetic {
+    background-color: var(--energetic);
+    color: #000;
+}
+
+.circle.selected-emote#happy {
+    background-color: var(--happy);
+    color: #000;
+}
+
+.circle.selected-emote#relaxed {
+    background-color: var(--relaxed);
+    color: #000;
+}
+
+.circle.selected-emote#sad {
+    background-color: var(--sad) ;
+    color: #000;
+}
+
+.circle.selected-emote {
+    background-color: var(--sad);
+    color: #000;
+}
+
+.circle.selected-emote .icon {
+    filter: invert(0%);
+}

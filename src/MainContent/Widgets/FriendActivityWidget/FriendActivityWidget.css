@@ -1,0 +1,65 @@
+.fa-widget {
+    width: 228px;
+    background-color: #222329;
+    border-radius: 28px;
+
+    display: flex;
+    flex-direction: column;
+
+    color: white;
+}
+
+.fa-title {
+    height: 42px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-right: 10px;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+.circle#fa {
+    height: 42px;
+    width: 42px;
+    border: none;
+    background-color: #33343d;
+}
+
+.fa-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 4px;
+}
+
+.fa-footer {
+    margin-top: auto;
+    margin-bottom: 8px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fa-footer-btn {
+    border: 2px #33343d solid;
+    border-radius: 22px;
+    width: 212px;
+    height: 42px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-item {
+    border: 2px #33343d solid;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    height: 102px;
+    width: 212px;
+}

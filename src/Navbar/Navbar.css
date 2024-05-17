@@ -1,0 +1,38 @@
+.horizontal-nav {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+    display: flex; /* Display list items in a row */
+    justify-content: space-between; /* Space between left and right sections */
+    align-items: center; /* Align items vertically */
+    height: 42px;
+}
+
+.left-nav,
+.right-nav {
+    display: flex; /* Display list items in a row */
+}
+
+.left-nav li,
+.right-nav li {
+    margin-right: 8px; /* Space between items */
+}
+
+.right-nav li:last-child {
+    margin-right: 0; /* Remove margin from the last item */
+}
+
+.left-nav li:last-child {
+    margin-right: 0; /* Remove margin from the last item */
+}
+
+/* Optional: Add some basic styling for the navbar items */
+.horizontal-nav li:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.logo-img {
+    width: 42px; /* Adjust the width as needed */
+    height: 42px; /* Maintain aspect ratio */
+}

@@ -1,0 +1,22 @@
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-box {
+    width: 600px; /* Adjust width as needed */
+    height: 42px; /* Adjust height as needed */
+    padding: 0 15px; /* Add some padding for better appearance */
+    border: 0; /* No border */
+    border-radius: 20px; /* Rounded edges */
+    font-size: 16px; /* Adjust font size as needed */
+    outline: none; /* Remove outline on focus */
+    background-color: rgba(61, 61, 61, 0.212); /* Semi-transparent grey */
+    color: white;
+    backdrop-filter: blur(10px); /* Apply blur effect */
+}
+
+.search-box::placeholder {
+    color: #ffffff; /* Placeholder text color */
+}

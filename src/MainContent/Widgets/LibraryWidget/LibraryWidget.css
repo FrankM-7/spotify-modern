@@ -1,0 +1,89 @@
+.lib-circle {
+    border-radius: 50%;
+    height: 42px;
+    width: 42px;
+    background-color: #33343d;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lib-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.nav-row#title:hover {
+    background-color: transparent;
+}
+
+.playlist-row {
+    height: 50px;
+    margin-bottom: 5px;
+    padding: 4px; /* Adds 5px padding on all sides */
+    display: flex; /* Aligns image and text inline */
+    align-items: center; /* Center-aligns items vertically */
+    box-sizing: border-box; /* Ensures padding is included in width */
+    border-radius: 13px;
+    justify-content: space-between;
+
+}
+
+.playlist-left {
+    display: flex; /* Aligns image and text inline */
+    align-items: center; /* Center-aligns items vertically */
+    height: 50px;
+    padding: 4px 0px; /* Adds 5px padding on all sides */
+    box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+.playlist-right {
+    height: 50px;
+    padding: 4px 0px; /* Adds 5px padding on all sides */
+    box-sizing: border-box; /* Ensures padding is included in width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.playlist-active {
+    height: auto;
+    width: 15px;
+    margin-right: 14px;
+}
+
+.playlist-row:hover {
+    background-color: #33343d;
+    cursor: pointer;
+}
+
+.selected-playlist {
+    background-color: #33343d;
+}
+
+.playlist-pic {
+    height: auto; /* Maintains aspect ratio */
+    width: auto; /* Width will be adjusted to fit */
+    max-width: calc(100% - 8px); /* Adjusts width considering padding */
+    max-height: 100%; /* Ensures image does not exceed container height */
+    border-radius: 12px;
+}
+
+.playlist-overview-container {
+    margin-left: 10px;
+}
+
+.playlist-title {
+    /* line up to the left */
+    text-align: left;
+    font-size: 15px;
+}
+.playlist-overview {
+    /* line up to the left */
+    text-align: left;
+    font-size: 12px;
+    color: #8e8e8e;
+}
