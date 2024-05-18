@@ -59,7 +59,68 @@
     border: 2px #33343d solid;
     border-radius: 22px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 12px;
+    padding-right: 12px;
+    box-sizing: border-box;
     height: 102px;
     width: 212px;
+    gap: 12px;
+}
+
+.fa-img-text-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+}
+
+.fa-album-cover {
+    height: 43px;
+    width: 43px;
+    border-radius: 12px;
+}
+
+.fa-album-cover img {
+    height: 43px;
+    width: 43px;
+    border-radius: 12px;
+}
+
+.fa-friend-pic {
+    height: 23px;
+    width: 23px;
+    border-radius: 50%;
+}
+
+.fa-friend {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.fa-friend-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.fa-friend-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #33343d;
+    padding: 4px 8px;
+    border-radius: 12px;
+}
+
+.fa-friend-name {
+    margin-left: 7px;
+    overflow: hidden;
+}
+
+.last-active {
+    font-size: 2px;
+    overflow: hidden;
 }
