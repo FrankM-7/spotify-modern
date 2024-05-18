@@ -1,0 +1,82 @@
+.artist-containers {
+    height: 310px;
+    width: 310px;
+    padding: 12px;
+    box-sizing: border-box;
+    border-radius: 27px;
+    gap: 0px;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.a-row {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.a-top {
+    flex-direction: column;
+}
+
+.a-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    gap: 4px;
+    width: 100%;
+
+}
+
+.artist-img {
+    width: 101px;
+    height: 101px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.artist-img img {
+    width: 101px;
+    object-fit: cover;
+    height: 101px;
+    border-radius: 50%;
+}
+
+.a-button {
+    border: 2px #33343d solid;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.a-button#shuffle {
+    min-height: 42px;
+    min-width: 42px;
+}
+.a-button#following {
+    width: 100%;
+}
+.f-play {
+    min-height: 45px;
+    min-width: 45px;
+    background-color: #1ed760;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.f-play img {
+    height: 15px;
+    width: 15px;
+
+}
+.shuffleBtn {
+    height: 20px;
+    width: 20px;
+}
