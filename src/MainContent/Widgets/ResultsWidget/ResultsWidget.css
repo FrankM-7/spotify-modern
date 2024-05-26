@@ -1,0 +1,50 @@
+.results-widget {
+    background-color: #222329;
+}
+
+.results {
+    height: 100%;
+    scrollbar-width: none; /* Firefox */
+
+
+    overflow: scroll;
+}
+
+.result-item {
+    height: 50px;
+    width: 200px;
+    color: white;
+
+    display: flex;
+    flex-direction: row;
+
+    margin-bottom: 10px;
+}
+
+.result-item-img {
+    height: 50px;
+    width: 50px;
+}
+
+.results-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.result-song-info {
+    height: 100%;
+    margin-left: 5px;
+}
+.result-song-title {
+    height: 50%;
+    width: 150px;
+    overflow: hidden;
+    white-space: nowrap;  /* Prevent text from wrapping to the next line */
+    text-overflow: ellipsis;  /* Add an ellipsis (…) at the point where the text overflows */
+}
+.result-song-artist {
+    height: 50%;
+    overflow: hidden;
+}
