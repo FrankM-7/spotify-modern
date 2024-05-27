@@ -15,16 +15,18 @@ function ResultsWidget({style, query, authToken}) {
     useEffect(() => {
         const { cancel, token } = axios.CancelToken.source();
         const timeOutId = setTimeout(
-            () => fetchHits(query, authToken, dispatch, token),
+            () => fetchHits(query, authToken.access_token, dispatch, token),
             500
         );
         return () => cancel("No longer latest query") || clearTimeout(timeOutId);
+
     }, [query, authToken]);
 
     return (
         <div className="results-widget" style={style}>
-            {/* {hits && !isLoading && !hasError} */}
+            {hits && !isLoading && !hasError}
             <Results hits={hits} isLoading={isLoading} hasError={hasError} />
+
         </div>
     );
 }
