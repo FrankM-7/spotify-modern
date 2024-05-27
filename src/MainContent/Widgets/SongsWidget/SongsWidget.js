@@ -25,7 +25,6 @@ const Item = styled(Paper)(({ theme }) => ({
 function SongsWidget({ style }) {
     const [selected, setSelected] = useState(1);
     const handleSelect = (index) => {
-        console.log(index);
         setSelected(index);
     };
 

@@ -9,8 +9,9 @@ import FriendActivityWidget from "./Widgets/FriendActivityWidget/FriendActivityW
 import LatestReleaseWidget from "./Widgets/LatestReleaseWidget/LatestReleaseWidget";
 import DiscographyWidget from "./Widgets/DiscographyWidget/DiscographyWidget";
 import LikedSongsWidget from "./Widgets/LikedSongsWidget/LikedSongsWidget";
+import ResultsWidget from "./Widgets/ResultsWidget/ResultsWidget";
 
-function MainContent() {
+function MainContent({authToken, query}) {
     // set width in px
     const width = '232px';
     const gap = '8px';
@@ -26,6 +27,9 @@ function MainContent() {
                     </div>
                     <div className="main-container-column" style={{marginLeft: gap}}>
                         <ArtistWidget style={{width: '310px', height: '310px', borderRadius: borderRadius}} />
+                    </div>
+                    <div className="main-container-column" style={{marginLeft: gap}}>
+                        <ResultsWidget query={query} authToken={authToken} style={{width: '710px', height: '310px', borderRadius: borderRadius}} />
                     </div>
                 </div>
                 <div className="main-container-row">

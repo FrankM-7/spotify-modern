@@ -151,7 +151,7 @@
 }
 
 .progress-container {
-    width: 100%;
+    width: 600px;
     background-color: #33343d;
     height: 8px;
     border-radius: 5px;
