@@ -15,22 +15,11 @@ const Text = styled('div')(({ theme }) => ({
   ...theme.typography.body2,
 }));
 
-const track = {
-  name: "",
-  album: {
-    images: [
-      { url: "" }
-    ]
-  },
-  artists: [
-    { name: "" }
-  ]
-}
 
-function Player(props) {
+function Player({token, current_track, setTrack }) {
 
   const [player, setPlayer] = useState(null);
-  const [current_track, setTrack] = useState(track);
+  // const [current_track, setTrack] = useState(track);
   const [progress, setProgress] = useState(0);
   const [volume, setVolume] = useState(0.25);
   const [device_id, setDeviceID] = useState(null);
@@ -61,7 +50,7 @@ function Player(props) {
 
       const playerLocal = new window.Spotify.Player({
         name: 'Web Playback SDK',
-        getOAuthToken: cb => { cb(props.token); },
+        getOAuthToken: cb => { cb(token); },
         volume: volume
       });
 
@@ -88,7 +77,7 @@ function Player(props) {
       setPlayer(playerLocal);
 
     };
-  }, [props.token]);
+  }, [token]);
 
   useEffect(() => {
     if (!player) return;
@@ -129,9 +118,7 @@ function Player(props) {
     const width = rect.width;
     const newVolume = (offsetX / width);
     setVolume(newVolume);
-
-    // const volume = event.target.value;
-    // setVolume(volume);
+    
     if (player) {
       player.setVolume(newVolume);
     }
@@ -142,7 +129,6 @@ function Player(props) {
   };
 
   const onPlayClick = () => {
-    console.log(progress);
     player.togglePlay();
   }
 

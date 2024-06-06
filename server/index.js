@@ -3,6 +3,7 @@ const express = require('express')
 const dotenv = require('dotenv');
 const cors = require('cors');  // Import cors
 const bodyParser = require('body-parser');
+const {google} = require('googleapis');
 
 const port = 5000
 
@@ -10,6 +11,7 @@ dotenv.config()
 
 var spotify_client_id = process.env.REACT_APP_CLIENT_ID
 var spotify_client_secret = process.env.REACT_APP_CLIENT_SECRET
+const youtube = google.youtube({ version: 'v3', auth: process.env.REACT_APP_YOUTUBE_API_KEY });
 
 var app = express();
 
@@ -123,6 +125,22 @@ app.put('/playback/transfer', (req, res) => {
 
   // Send a response back to the client
   res.status(200).send('Data received successfully');
+});
+
+app.post('/search', async (req, res) => {
+  console.log("searching for video ID")
+  youtube.search.list({
+    part: 'snippet',
+    q: req.body.query,
+  }, (err, response) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+
+    res.json(response.data.items);
+    console.log(response.data.items[0].id.videoId);
+  });
 });
   
   

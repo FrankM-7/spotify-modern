@@ -7,9 +7,22 @@ import { useEffect, useState } from 'react';
 import { requestAuthorization } from "./api/auth";
 import AuthContextProvider from './Navbar/context/auth-context';
 
+const track = {
+  name: "",
+  album: {
+    images: [
+      { url: "" }
+    ]
+  },
+  artists: [
+    { name: "" }
+  ]
+}
+
 function App() {
   const [authToken, setAuthToken] = useState({});
   const [query, setQuery] = useState("");
+  const [current_track, setTrack] = useState(track);
 
   // backend
   const [token, setToken] = useState('');
@@ -30,7 +43,6 @@ function App() {
   }, []);
 
   const handleLogin = () => {
-    // window.location.href = '/auth/login';
     window.location.href = 'http://localhost:5000/auth/login';  // Use direct redirection to the backend endpoint
   };
 
@@ -41,8 +53,8 @@ function App() {
     <AuthContextProvider authToken={authToken.access_token}>
       <div className="App">
         <Navbar query={query} setQuery={setQuery} />
-        <MainContent query={query} authToken={authToken} />
-        { (token === '') ? <button onClick={handleLogin}>Login with Spotify</button> : <Player token={token} /> }
+        <MainContent query={query} authToken={authToken} current_track={current_track} />
+        { (token === '') ? <button onClick={handleLogin}>Login with Spotify</button> : <Player token={token} setTrack={setTrack} current_track={current_track} /> }
       </div>
     </AuthContextProvider>
   );

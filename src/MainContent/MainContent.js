@@ -10,12 +10,14 @@ import LatestReleaseWidget from "./Widgets/LatestReleaseWidget/LatestReleaseWidg
 import DiscographyWidget from "./Widgets/DiscographyWidget/DiscographyWidget";
 import LikedSongsWidget from "./Widgets/LikedSongsWidget/LikedSongsWidget";
 import ResultsWidget from "./Widgets/ResultsWidget/ResultsWidget";
+import VideoWidget from "./Widgets/VideoWidget/VideoWidget";
 
-function MainContent({authToken, query}) {
+function MainContent({authToken, query, current_track}) {
     // set width in px
     const width = '232px';
     const gap = '8px';
     const borderRadius = '27px';
+
     return (
         <div className="main-container">
             <div className="main-container-column">
@@ -29,7 +31,8 @@ function MainContent({authToken, query}) {
                         <ArtistWidget style={{width: '310px', height: '310px', borderRadius: borderRadius}} />
                     </div>
                     <div className="main-container-column" style={{marginLeft: gap}}>
-                        <ResultsWidget query={query} authToken={authToken} style={{width: '710px', height: '310px', borderRadius: borderRadius}} />
+                        {/* <ResultsWidget query={query} authToken={authToken} style={{width: '710px', height: '310px', borderRadius: borderRadius}} /> */}
+                        <VideoWidget current_track={current_track} style={{width: '710px', height: '310px', borderRadius: borderRadius}} />
                     </div>
                 </div>
                 <div className="main-container-row">
